@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="shortcut icon" href="/img/favicon2.png" type="image/x-icon">
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 <link href="/css/common.css" rel="stylesheet" />
 </head>
 <body>
@@ -27,6 +27,9 @@
     <div><a href="/Board/WriteForm?menu_id=MENU01">게시글 추가</a></div>
     <div>&nbsp;</div>
     
+    <div><a href="/BoardPaging/List?menu_id=MENU01&nowpage=1">게시글 목록(Paging)</a></div>
+    <div><a href="/BoardPaging/WriteForm?menu_id=MENU01&nowpage=1">게시글 추가(Paging)</a></div>
+    <div>&nbsp;</div>
     <div>
       ${ sessionScope.login.username } 님 환영합니다<br>
       당신의 가입일은 ${ sessionScope.login.regdate } 입니다<br>
