@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>중복확인하쇼</title>
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+<link href="/css/common.css" rel="stylesheet" />
 <style>
   .red    { color :red; }
   .green  { color :green; }

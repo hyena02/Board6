@@ -5,36 +5,62 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>유저 생성</title>
 <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 <link href="/css/common.css" rel="stylesheet" />
-
 <style>
-  table { width:100%; }
-  td {
-     padding:5px 10px;
-     text-align : center;
-     &:nth-of-type(1) {
-	     background: black;
-	     color : white;
-	     border:1px solid white;
-	 } 
-  }
-  tr:last-child > td {
-      background: white;
-      border : 1px solid black; 
-  }
-    
+main {
+	width  : 900px;
+	margin : 50px auto;
+	padding: 30px;
+}
+table {
+	width : 100%;
+	border-collapse : collapse;
+	overflow:hidden;
+	border-radius:10px;
+}
+ td {
+    padding:5px 10px;
+    text-align : center; 
+ }
+ tr > td:first-child {
+ 	background-color:gray;
+ 	color : white;
+ }
+ tr:last-child > td {
+     background: #fafafa;
+ 
+ }
+   
   input[type="text"], input[type=number], input[type=password]  {
      width : 100%;
   }
   input[type=submit], input[type=button] {
      width : 100px;
   }
-  input[name=userid] {
-     width : 65%;
-  }
-  
+	input[type="text"],input[type=email],input[type=password]{
+		width : 100%;
+	}
+	input[type=submit],input[type=button] {
+		width : 100px;
+	}
+	input[name=userid] {
+		width : 50%;
+		float : left;
+		margin-right:5px;
+	}
+	#dupCheck1,#dupCheck2{
+		width : 16%;
+		font-size:12px;
+
+	}
+	
+	.red { 
+		color:blue; 
+		font-wheight : bold;
+	}
+
 </style>
 <body> 
   <main>

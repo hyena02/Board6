@@ -7,81 +7,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>글쓰기</title>
 <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link href="/css/common.css" rel="stylesheet" />
 
 <style>
-body {
-    margin: 0;
-    background: #f5f7fa;
-    font-family: inherit;
-}
-
-
 main {
-    width: 900px;
-    margin: 50px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
-}
-h2 {
-    margin: 20px;
-}
-/* 메뉴 영역 */
-.top {
-    margin-bottom: 15px;
-    text-align: right;
-}
-
-/* 링크 버튼 스타일 */
-a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: 0.2s;
-}
-
-a:hover {
-    background:gray;
-    color: white;
+	width  : 900px;
+	margin : 50px auto;
+	padding: 30px;
 }
 table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 10px;
+	width : 100%;
+	border-collapse : collapse;
+	overflow:hidden;
+	border-radius:10px;
 }
-tr:first-child {
-    background: gray;
-    color: white;
-}
-td {
-    padding: 12px;
-    text-align: center;
-}
-tr {
-    border-bottom: 1px solid #ddd;
-}
-
-
-tr:nth-child(even):not(:first-child) {
-    background-color: #fafafa;
-}
-
-
-tr:nth-of-type(2) td {
-    text-align: right;
-    background: #fff;
-    border-bottom: 2px solid #eee;
-}
+ td {
+    padding:5px 10px;
+    text-align : center; 
+ }
+ tr > td:first-child {
+ 	background-color:gray;
+ 	color : white;
+ }
+ tr:last-child > td {
+     background: gray;
+ 
+ }
+   
+  input[type="text"], input[type=number], input[type=password]  {
+     width : 100%;
+  }
+  input[type=submit], input[type=button] {
+     width : 100px;
+  }
+  input[name=userid] {
+     width : 65%;
+  }
+  
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
@@ -108,8 +74,8 @@ tr:nth-of-type(2) td {
 
 	    <tr>
 	      <td  colspan="7">
-	       [<a href="/Board/WriteForm?menu_id=${ menu_id }">새 글 등록</a>]&nbsp;&nbsp;&nbsp; 
-	       [<a href="/">Home</a>] 
+	       |<a href="/Board/WriteForm?menu_id=${ menu_id }">새 글 등록</a>|&nbsp;&nbsp;&nbsp; 
+	       |<a href="/">Home</a>|
 	      </td>
 	    </tr>
 	    
@@ -129,6 +95,7 @@ tr:nth-of-type(2) td {
 	    </tr>
 	    </c:forEach>
 	  </table>	
+	  <%@include file="/WEB-INF/include/paging.jsp" %>
 	</main>
 </body>
 </html>

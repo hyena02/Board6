@@ -5,33 +5,41 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="shortcut icon" href="/img/favicon2.png" type="image/x-icon">
+<title>유저 수정</title>
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 <link href="/css/common.css" rel="stylesheet" />
-
+</head>
 <style>
-  table { width:100%; }
-  td {
-     padding:5px 10px;
-     text-align : center;
-     &:nth-of-type(1) {
-	     background: black;
-	     color : white;
-	     border:1px solid white;
-	 } 
-  }
-  tr:last-child > td {
-      background: white;
-      border : 1px solid black; 
-  }
-    
-  input[type="text"], input[type=number], input[type=password]  {
-     width : 100%;
-  }
-  input[type=submit], input[type=button] {
-     width : 100px;
-  }
-  
+	main {
+		text-align: center;
+		border : 1px solid black;
+		padding : 5px;
+		margin : 10px auto;
+	}
+	table,th,td {
+		border : 1px solid black;
+		border-collapse: collapse;
+	}
+	table {
+		width : 100%;
+	}
+	td {
+		padding : 5px 10px;
+	}
+	td:nth-of-type(1){
+		background: gray;
+		color : white;
+		border : 1px solid white;
+	}
+	tr:last-child > td {
+		background: white;
+	}
+	input[type="text"],input[type=email],input[type=password]{
+		width : 100%;
+	}
+	input[type=submit],input[type=button] {
+		width : 100px;
+	}
 </style>
 <body> 
   <main>

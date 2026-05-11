@@ -5,33 +5,46 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>메뉴 수정</title>
 <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 <link href="/css/common.css" rel="stylesheet" />
 
 <style>
-  table { width:100%; }
-  td {
-     padding:5px 10px;
-     text-align : center;
-     &:nth-of-type(1) {
-	     background: black;
-	     color : white;
-	     border:1px solid white;
-	 } 
-  }
-  tr:last-child > td {
-      background: white;
-      border : 1px solid black; 
-  }
-    
-  input[type=text], input[type=number] {
-     width : 100%;
-  }
-  input[type=submit], input[type=button] {
-     width : 100px;
-  }
-  
+	main {
+		
+		text-align: center;
+		border : 1px solid black;
+		padding : 5px;
+		margin : 10px auto;
+	}
+	table{
+	border : 1px solid black;
+	width : 100%;
+	}
+	td{
+		padding : 5px;
+		
+		}
+	table,th,td {
+		border : 1px solid black;
+		border-collapse: collapse;
+	}
+	td:first-child{
+		background-color: gray;
+		color:white;
+		td {
+			border : 1px solid black;
+			}
+		}
+	tr:nth-of-type(2) td {
+		padding-right: 10px;
+	}
+	a:hover {
+		text-decoration: none;
+		color : red;
+		font-weight: bold;
+	}
+		
 </style>
 <body> 
   <main>

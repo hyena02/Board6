@@ -7,33 +7,44 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="shortcut icon" href="/img/favicon2.png" type="image/x-icon">
+<title>유저 목록</title>
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 <link href="/css/common.css" rel="stylesheet" />
 
 <style>
-   table { width:100%;  }
-   td {
-      padding    : 5px;
-      text-align : center;
-   }
-   tr:first-child {
-      background-color: black;
-      color :  white;      
-      td  {
-         border : 1px solid white;
-      } 
-   }
-   tr:nth-of-type(2) td {
-	  text-align :right;
-	  padding-right: 20px;
-   }
-   
-   main {
-      margin-bottom : 150px; 
-   }
+	main {
+		text-align: center;
+		border : 1px solid black;
+		padding : 5px;
+		margin : 10px auto;
+	}
+	table,th,td {
+		border : 1px solid black;
+		border-collapse: collapse;
+	}
+	table{
+		width : 100%;
+	}
+	td{
+		padding : 5px;
+		}
+	tr:first-child{
+		background-color: gray;
+		color:white;
+		td {
+			border : 1px solid black;
+		}
+	}
+	tr:nth-of-type(2) td {
+		text-align: right;
+		padding-right: 10px;
+	}
+	a:hover {
+		text-decoration: none;
+		color : red;
+		font-weight: bold;
+	}
 </style>
-
 </head>
 
 <body>

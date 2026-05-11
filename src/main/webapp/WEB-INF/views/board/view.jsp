@@ -6,82 +6,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
+<title>글 보기</title>
 <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
-
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<link href="/css/common.css" rel="stylesheet" />
-
+<link href="/css/common.css" rel="stylesheet"/>
 <style>
-  table { width:100%; }
-  td {
-     padding:5px 10px;
-     text-align : center;
-     &:nth-of-type(1) {
-	     background: black;
-	     color : white;
-	     border:1px solid white;
-	 } 
-  }
- 
-  
-  /*     ------------------------------ */
-    
-  input[type="text"], input[type=number], input[type=password]  {
-     width : 100%;
-  }
-  input[type=submit], input[type=button] {
-     width : 100px;
-  }
-  input[name=userid] {
-     width : 65%;
-  }
-  
-  #table1 {
-     margin-bottom : 150px;
-     td {
-        &:nth-of-type(1) {
-           width : 150px;  
-           background: black;
-	       color : white;         
-        }
-        &:nth-of-type(2) {
-           width : 150px;
-           background: white;
-	       color : black;           
-        }
-        &:nth-of-type(3) {
-           width : 150px;
-           background: black;
-	       color : white; 
-	       border-bottom : 1px solid white;          
-        }
-        &:nth-of-type(4) {
-           width : 150px;
-           background: white;
-	       color : black;                  
-        }
-     }
-  }
-  
-  #table1  tr:last-of-type > td {
-      background: white;
-      border : 1px solid black; 
-  }  
-  #table1  tr:nth-of-type(3) td:nth-of-type(2) { 
-      text-align: left;
-  }
-  #table1  tr:nth-of-type(4) {
-      height : 400px;
-      td:nth-of-type(2) {
-         text-align:left;
-         vertical-align: baseline;
-      }
-  }
-  
-  
-</style>
 
+	main {
+		width : 900px;
+	}
+
+	td {
+		padding : 5px 10px;
+	}
+	td:first-child {
+		background-color:gray;
+	}
+	tr:nth-of-type(2) td {	
+		padding : 10px;
+	}
+	tr:last-child > td {
+		background: white;
+	}
+	input[type="text"],input[type=email],input[type=password]{
+		width : 100%;
+		
+	}
+	input[type=submit],input[type=button] {
+		width : 100px;
+		background-color:gray;
+	}
+	input[name=userid] {
+		width : 50%;
+		float : left;
+		margin-right:5px;
+	}
+	#dupCheck1,#dupCheck2{
+		width : 16%;
+		font-size:12px;
+	}
+	
+	.red { 
+		color:blue; 
+		font-wheight : bold;
+	}
+	tr:last-child td {
+		text-align: center;
+		padding-top: 20px;
+	}
+</style>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
 <body> 

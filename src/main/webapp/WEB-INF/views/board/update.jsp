@@ -5,87 +5,64 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="shortcut icon" href="/img/favicon2.png" type="image/x-icon">
-<link href="/css/common.css" rel="stylesheet" />
+<title>글 수정</title>
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<link href="/css/common.css" rel="stylesheet"/>
+	<style>
+main {
+	width  : 900px;
+	margin : 50px auto;
+	padding: 30px;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
 
-<style>
-    table { width:100%; }
-  td {
-     padding:5px 10px;
-     text-align : center;
-     &:nth-of-type(1) {
-	     background: black;
-	     color : white;
-	     border:1px solid white;
-	 } 
-  }
+a:hover {
+    background:gray;
+    color: white;
+}
+input {
+	text-decoration: none;
+	padding : 10px;
+}
+table {
+	width : 100%;
+	border-collapse : collapse;
+	overflow:hidden;
+	border-radius:10px;
+}
+ td {
+    padding:5px 10px;
+    text-align : center; 
+ }
  
-  
-  /*     ------------------------------ */
-    
-  input[type="text"], input[type=number], input[type=password]  {
-     width : 100%;
-  }
-  input[type=submit], input[type=button] {
-     width : 100px;
-  }
-  input[name=userid] {
-     width : 65%;
-  }
-  
-  #table1 {
-     margin-bottom : 150px;
-     td {
-        &:nth-of-type(1) {
-           width : 150px;  
-           background: black;
-	       color : white;         
-        }
-        &:nth-of-type(2) {
-           width : 150px;
-           background: white;
-	       color : black;           
-        }
-        &:nth-of-type(3) {
-           width : 150px;
-           background: black;
-	       color : white; 
-	       border-bottom : 1px solid white;          
-        }
-        &:nth-of-type(4) {
-           width : 150px;
-           background: white;
-	       color : black;                  
-        }
-     }
-  }
-  
-  #table1  tr:last-of-type > td {
-      background: white;
-      border : 1px solid black; 
-  }  
-  #table1  tr:nth-of-type(3) td:nth-of-type(2) { 
-      text-align: left;
-  }
-  #table1  tr:nth-of-type(4) {
-      height : 400px;
-      td:nth-of-type(2) {
-         text-align:left;
-         vertical-align: baseline;
-      }
-  }
-  
-  textarea {
-     width:100%;
-     height : 400px;     
-  }
-  
-  input[name="title"]
-  ,textarea {
-     padding:5px;
-  }
+ tr > td:first-child {
+ 	background-color:gray;
+ 	color : white;
+ }
+ tr:last-child > td {
+     background: #fafafa;
+ 
+ }
+ 
+	tr:last-child > td {
+		background: white;
+	}
+	input[type="text"],input[type=email],input[type=password]{
+		width : 100%;
+	}
+	input[type=submit],input[type=button] {
+		width : 100px;
+	}
 </style>
+</head>
 <body> 
   <main>
     <%@include file="/WEB-INF/include/menus.jsp" %>  

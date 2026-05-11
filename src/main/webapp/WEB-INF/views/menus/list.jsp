@@ -7,31 +7,43 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>메뉴 리스트</title>
 <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
 <link href="/css/common.css" rel="stylesheet" />
 
 <style>
-   table { width:100%;  }
-   td {
-      padding    : 5px;
-      text-align : center;
-   }
-   tr:first-child {
-      background-color: black;
-      color :  white;      
-      td  {
-         border : 1px solid white;
-      } 
-   }
-   tr:nth-of-type(2) td {
-	  text-align :right;
-	  padding-right: 20px;
-   }
-   
-   main {
-      margin-bottom : 150px; 
-   }
+
+table{
+	width : 100%;
+	border-radius : 10px;
+	
+}
+tr {
+    border-bottom: 1px solid #ddd;
+}
+tr:first-child{
+	background-color: gray;
+	color:white;
+	td {
+		border : 1px solid white;
+	}
+}
+tr:nth-of-type(2) td {
+	text-align: right;
+	padding-right: 10px;
+}
+a{
+	padding : 4px 6px;
+	border-radius : 6px;
+	transition:0.2s;
+	text-decoration: none;
+	
+
+}
+a:hover {
+	background-color : gray;
+	color:white;
+}
 </style>
 
 </head>

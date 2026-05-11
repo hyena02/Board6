@@ -7,48 +7,80 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="shortcut icon" href="/img/favicon2.png" type="image/x-icon">
+<title>paging 목록</title>
+<link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link href="/css/common.css" rel="stylesheet" />
 
 <style>
-   table { width:100%;  }
-   td {
-      padding    : 5px;
-      text-align : center;
-   }
-   #list {
-	   td:nth-of-type(1)  {width:100px;}	
-	   td:nth-of-type(2)  {width:300px;}	
-	   td:nth-of-type(3)  {width:100px;}	
-	   td:nth-of-type(4)  {width:100px;}	
-	   td:nth-of-type(5)  {width:100px;}
-   }
-     
-   tr:first-of-type {
-      background-color: black;
-      color :  white;      
-      td  {
-         border : 1px solid white;        
-      } 
-   }
-   tr:nth-of-type(2) td {
-	  text-align :right;
-	  padding-right: 20px;
-   }
-   .title { text-align:left;  } 
- 
-   
-   main {
-      margin-bottom : 150px; 
-   }
-   
-   /* .menu td > .${ menu_id } { background-color : #04AA6D; } */  
+body {
+    margin: 0;
+    background: #f5f7fa;
+    font-family: inherit;
+}
+
+
+main {
+    width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+h2 {
+    margin: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+/* 메뉴 영역 */
+.top {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+
+tr:first-child {
+    background: gray;
+    color: white;
+}
+td {
+    padding: 12px;
+    text-align: center;
+}
+td:first-child {
+	background:gray;
+	color:white;
+}
+
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tr:first-child td{
+	padding:5px;
+	font-weight:bold;
+}
+tr:nth-child(even):not(:first-child) {
+    background-color: #fafafa;
+}
+
+
+tr:nth-of-type(2) td {
+    text-align: right;
+    background: #fff;
+    border-bottom: 2px solid #eee;
+}
 </style>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -65,12 +97,16 @@
 	      <td>글쓴이</td>
 	      <td>날짜</td>
 	      <td>조회수</td>	
+	      <td>삭제</td>	
+	      <td>수정</td>	
 	    </tr>
 
 	    <tr>
-	      <td  colspan="5">
-	       [<a href="/Board/WriteForm?menu_id=${ menu_id }">새 글 등록</a>]&nbsp;&nbsp;&nbsp; 
-	       [<a href="/">Home</a>] 
+	      <td  colspan="7">
+	       |<a href="/BoardPaging/WriteForm?menu_id=${menu_id}&nowpage=${nowpage}">
+	       새 글 등록
+	       </a>|&nbsp;&nbsp;&nbsp; 
+	       |<a href="/">Home</a>| 
 	      </td>
 	    </tr>
 	    
@@ -85,6 +121,8 @@
 	      <td> ${ board.writer   }  </td>
 	      <td> ${ board.regdate  }  </td>
 	      <td> ${ board.hit      }  </td>
+	      <td> <a href="/Board/Delete?idx=${board.idx}">삭제</a></td>
+	      <td> <a href="/Board/UpdateForm?idx=${board.idx}">수정</a></td>
 	    </tr>
 	    </c:forEach>
 	  </table>	
